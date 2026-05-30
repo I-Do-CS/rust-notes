@@ -158,6 +158,6 @@ So generally,
 The standard library prelude import is automatic.
 Library preludes are manual convenience imports; their purpose is reducing repetitive use statements and improving ergonomics.
 
-### Author
+## Author
 
 [Ali Ghelichkhani](https://github.com/I-Do-CS)

@@ -96,6 +96,6 @@ my_package/     # Package
 
 More on Cargo, Crates and managing complex projects later...
 
-### Author
+## Author
 
 [Ali Ghelichkhani](https://github.com/I-Do-CS)
