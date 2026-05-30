@@ -8,4 +8,4 @@ The order of concepts is roughly the same as [The Rust Programming Language](htt
 
 - [Introduction](https://github.com/I-Do-CS/rust-notes/tree/main/00.intro/intro.md)
 - [Common Programming Concepts in Rust](https://github.com/I-Do-CS/rust-notes/tree/main/01.concepts/concepts.md)
-- [Ownership & Borrowing](https://github.com/I-Do-CS/rust-notes/tree/main/01.ownership/ownership.md)
+- [Ownership & Borrowing](https://github.com/I-Do-CS/rust-notes/tree/main/02.ownership/ownership.md)
