@@ -6,4 +6,4 @@ The order of concepts is roughly the same as [The Rust Programming Language](htt
 
 ## Table of Contents
 
-- [Introduction](https://github.com/I-Do-CS/rust-notes/tree/main/00.Introduction/Introduction.md)
+- [Introduction](https://github.com/I-Do-CS/rust-notes/tree/main/00.intro/intro.md)
