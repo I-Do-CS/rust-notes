@@ -7,3 +7,4 @@ The order of concepts is roughly the same as [The Rust Programming Language](htt
 ## Table of Contents
 
 - [Introduction](https://github.com/I-Do-CS/rust-notes/tree/main/00.intro/intro.md)
+- [Common Programming Concepts in Rust](https://github.com/I-Do-CS/rust-notes/tree/main/01.concepts/concepts.md)
