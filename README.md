@@ -12,3 +12,4 @@ The order of concepts is roughly the same as [The Rust Programming Language](htt
 - [Structuring Related Data with Structs](https://github.com/I-Do-CS/rust-notes/tree/main/03.structs/structs.md)
 - [Enums and Pattern Matching](https://github.com/I-Do-CS/rust-notes/tree/main/04.enums/enums.md)
 - [Common Collections in Rust](https://github.com/I-Do-CS/rust-notes/tree/main/05.collections/collections.md)
+- [Error Handling](https://github.com/I-Do-CS/rust-notes/tree/main/06.errors/errors.md)
