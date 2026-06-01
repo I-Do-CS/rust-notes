@@ -14,3 +14,4 @@ The order of concepts is roughly the same as [The Rust Programming Language](htt
 - [Common Collections in Rust](https://github.com/I-Do-CS/rust-notes/tree/main/05.collections/collections.md)
 - [Error Handling](https://github.com/I-Do-CS/rust-notes/tree/main/06.errors/errors.md)
 - [Generic Types](https://github.com/I-Do-CS/rust-notes/tree/main/07.generics/generics.md)
+- [Traits In Rust](https://github.com/I-Do-CS/rust-notes/tree/main/08.traits/traits.md)
