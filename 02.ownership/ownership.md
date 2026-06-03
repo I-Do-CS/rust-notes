@@ -6,6 +6,7 @@
 - [Move](#move)
 - [References](#references)
 - [Borrowing](#borrowing)
+  - [The Borrow Checker](#the-borrow-checker)
 - [Dangling References](#dangling-references)
 
 ## Ownership
@@ -139,14 +140,22 @@ fn main() {
 
 There are 4 very important rules for borrowing:
 
-1. You can have **_any number_** of **_immutable_** references.
-2. You can have **_only one mutable_** reference at a time.
+1. You can have any number of immutable references.
+2. You can have only one mutable reference at a time.
 3. Mutable and immutable references cannot coexist simultaneously.
-4. References must always be valid.
+4. References must always be valid (no use-after-frees).
 
 The reasons for these rules boil down to preventing data races and invalid memory access.
 
-The following two snippets highlight the difference in semantics between moving and borrowing.
+### The Borrow Checker
+
+The borrow checker is the part of the compiler that enforces Rust’s ownership and borrowing rules.
+It statically analyzes code before execution and verifies references never outlive data, no dangling references exist, borrowing rules are obeyed, and mutable aliasing violations do not occur.
+
+The borrow checker is one of Rust’s defining features.
+It enables static enforcement of memory/thread safety, no garbage collection overhead, and no runtime borrow tracking in normal safe code.
+
+The following snippet highlight the difference in semantics between moving and borrowing.
 
 ```rust
 fn x_moved(x: String) {
