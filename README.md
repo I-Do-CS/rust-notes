@@ -16,3 +16,4 @@ The order of concepts is roughly the same as [The Rust Programming Language](htt
 - [Generic Types](https://github.com/I-Do-CS/rust-notes/tree/main/07.generics/generics.md)
 - [Traits In Rust](https://github.com/I-Do-CS/rust-notes/tree/main/08.traits/traits.md)
 - [Validating References with Lifetimes](https://github.com/I-Do-CS/rust-notes/tree/main/09.lifetimes/lifetimes.md)
+- [Writing Automated Tests](https://github.com/I-Do-CS/rust-notes/tree/main/10.tests/tests.md)

@@ -196,7 +196,7 @@ Here is a list of list of important things to know in regards to lifetimes that 
 
 ## Traits Bounds, Generic Types, & Lifetime Annotations
 
-Similar to what I did before, I'll provide examples that use a combination of trait bounds, generic types and lifetime annotations to show thm in practice and clarify the syntax.
+Similar to what I did before, I'll provide examples that use a combination of trait bounds, generic types and lifetime annotations to show them in practice and clarify the syntax.
 
 - Generic function with trait bounds and lifetimes:
 
@@ -285,3 +285,7 @@ where
     }
 }
 ```
+
+## Author
+
+[Ali Ghelichkhani](https://github.com/I-Do-CS)
