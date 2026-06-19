@@ -1,6 +1,7 @@
 # Generic Types
 
 - [Overview](#overview)
+- [Monomorphization](#monomorphization)
 - [Generic Constraints](#generic-constraints)
 - [Generic Structs](#generic-structs)
 - [Generic Enums](#generic-enums)
@@ -57,9 +58,17 @@ let x: &i32 = largest(&items);
 let x = largest(&items);
 ```
 
-In the above example, T is a type parameter. We can pass any type to the `largest<T>` function as long as it implements the `PartialOrd` trait. Technically, our `largest<T>` example is wrong, because we didn't specify this constraint; but we'll get to that shortly.
+In the above example, T is a type parameter. We can pass a slice of any type to the `largest<T>` function as long as it implements the `PartialOrd` trait. Technically, our `largest<T>` example is wrong, because we didn't specify this constraint; but we'll get to that shortly.
 
 Essentially, Generics allow us to easily implement abstractions and write reusable, type safe code.
+
+## Monomorphization
+
+One of Rust's most important generic features is monomorphization.
+
+Unlike languages such as C# or Java, Rust does not typically keep generic types around at runtime. Instead, during compilation, the compiler generates specialized versions of generic code for each concrete type that is used.
+
+Monomorphization is the reason generic code in Rust is often described as a zero-cost abstraction. It provides abstraction during development while producing highly optimized concrete code during compilation.
 
 ## Generic Constraints
 
@@ -100,11 +109,11 @@ struct Point<T> {
 }
 
 // Can also contain more than one parameter
-struct Color<T1, T2> {
-    r: T1,
-    g: T1,
-    b: T1,
-    opacity: T2,
+struct Color<Channel, Alpha> {
+    r: Channel,
+    g: Channel,
+    b: Channel,
+    opacity: Alpha,
 }
 
 fn main() {
@@ -132,10 +141,10 @@ fn main() {
 
 ## Generic enums
 
-Rust enums can also benefit from generic parameterization. The `Options<T>` and `Result<T, E>` are great examples of this:
+Rust enums can also benefit from generic parameterization. The `Option<T>` and `Result<T, E>` are great examples of this:
 
 ```rust
-enum Options<T> {
+enum Option<T> {
     Some(T),
     None,
 }
@@ -186,13 +195,16 @@ impl<T, U> Point<T, U> {
 fn main() {
     // Pay attention to the concrete types
     let p1: Point<i32, f64> = Point { x: 5, y: 10.4 };
-    let p2: <&str, char> = Point { x: "hello", y: 'c' };
+    let p2: Point<&str, char> = Point {
+        x: "hello",
+        y: 'c',
+    };
     let p3: Point<i32, char> = p1.mixup(p2);
 }
 ```
 
 3. Specialized implementations:
-   - These allow us to implement specific functionality for generics only when they have a certain concrete type.
+   - These allow methods to exist only for specific concrete instantiations of a generic type.
 
 ```rust
 struct Point<T> {
@@ -301,18 +313,27 @@ fn example1<T: Summary>(item: &T) -> String {
 // Same as above; `item: &impl Summary` reads as:
 // "Any reference type that implements the Summary trait"
 // It's syntax sugar for `fn example<T: Summary>(item: &T)`
+// ONLY WHEN FOR A SINGLE PARAMETER
 fn example1b(item: &impl Summary) -> String {
     return item.summarize();
 }
 
-// item1 and item2 are reference types that implement the
-// Summary trait. item3 is a value type that implements Display
+// *********************************************************************
+// Each `impl Trait` parameter introduces its own anonymous type parameter. Therefore
+// `fn foo(a: impl Trait, b: impl Trait)` is equivalent to
+// `fn foo<T, U>(a: T, b: U) where T: Trait, U: Trait`,
+// not `fn foo<T>(a: T, b: T)`.
+// *********************************************************************
+
+
+// item1 and item2 are references to values whose type implements Summary.
+// item3 is a value type that implements Display
 fn example2<T1: Summary, T2: Display>(item1: &T1, item2: &T1, item3: T2) {}
 
 // Same as above but T1 is a generic for multiple traits instead of one
 fn example3<T1: Summary + Clone + Copy, T2: Display>(item1: &T1, item2: &T1, item3: T2) {}
 
-// Same idea, different syntax
+// Same general concept using impl Trait syntax.
 fn example4(item1: &impl Summary, item2: impl Display, item3: &impl Copy) {}
 
 // Same as example3 but with the impl syntax
@@ -355,6 +376,7 @@ where
     };
 }
 ```
+
 ## Author
 
 [Ali Ghelichkhani](https://github.com/I-Do-CS)
