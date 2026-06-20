@@ -19,3 +19,4 @@ The order of concepts is roughly the same as [The Rust Programming Language](htt
 - [Writing Automated Tests](https://github.com/I-Do-CS/rust-notes/tree/main/10.tests/tests.md)
 - [Closures & Iterators](https://github.com/I-Do-CS/rust-notes/tree/main/11.closures/closures.md)
 - [Pointers](https://github.com/I-Do-CS/rust-notes/tree/main/12.pointers/pointers.md)
+- [Concurrency in Rust](https://github.com/I-Do-CS/rust-notes/tree/main/13.concurrency/concurrency.md)
