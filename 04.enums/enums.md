@@ -166,7 +166,7 @@ if let Command::Delete(id) = cmd {
 ```
 
 `let Command::Delete(id)` is a pattern; it's describing a value that's the `Delete()` variant of the `Command` enum.
-`if let Command::Delete(id) = cmd` checks wether the `cmd`
+`if let Command::Delete(id) = cmd` checkswhether the `cmd`
 variable matches the pattern we described. If it does, the field inside its `Delete(...)` is bound to the `id` variable and the block executes.
 
 ### 2. `if let ... else`

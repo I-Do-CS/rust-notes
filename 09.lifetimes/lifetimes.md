@@ -45,7 +45,7 @@ fn longest(x: &str, y: &str) -> &str {
 }
 ```
 
-This won't compile because the function returns a reference but the compiler doesn't know wether it's `x`'s or `y`'s reference.
+This won't compile because the function returns a reference but the compiler doesn't knowwhether it's `x`'s or `y`'s reference.
 The borrow checker needs to know how long the returned reference is guaranteed too remain valid (aka. its lifetime). So, we use the annotation syntax to let the compiler know.
 Like Types, we can pass generic lifetime parameters to our function/method signatures (as well as to our, structs, enums, etc).
 

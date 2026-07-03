@@ -48,7 +48,7 @@ Rust chooses safety over undefined behavior.
 When a panic occurs:
 
 1. The current thread begins termination
-2. Cleanup may occur based on wether it was configured (in Cargo.toml) as `unwind` or `abort`
+2. Cleanup may occur based onwhether it was configured (in Cargo.toml) as `unwind` or `abort`
 3. An error message is printed
 4. Optionally a backtrace is shown
 

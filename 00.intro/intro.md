@@ -39,7 +39,7 @@ cargo build
 # To build for specific profiles
 cargo build --release
 
-# To check wether a code builds successfully without building it
+# To checkwhether a code builds successfully without building it
 cargo check
 
 # To generate documentation for the current project and its dependencies; the --open flag opens the generated docs in the browser
