@@ -1,4 +1,4 @@
-# Enums and Pattern Matching
+# Enums, Patterns & Matching
 
 - [Enums](#enums)
 - [Patterns](#patterns)
