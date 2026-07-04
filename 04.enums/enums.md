@@ -64,7 +64,7 @@ fn main() {
 
 ## Patterns
 
-Patterns and pattern matching are essential parts of rust and I'll cover them in more depth later; for now, think of patterns as Rust's special way of describing/understanding the shape of data. Once we describe the shape of some data correctly, we can extract or bind it from/to variables and types.
+Patterns and pattern matching are essential parts of Rust and [I'll cover them in more depth later](https://github.com/I-Do-CS/rust-notes/tree/main/15.patterns/patterns.md); for now, think of patterns as Rust's special way of describing/understanding the shape of data. Once we describe the shape of some data correctly, we can extract or bind it from/to variables and types.
 
 ```rust
 // `(x, y)` is the pattern here. This reads as:
