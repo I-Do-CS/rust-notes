@@ -22,3 +22,4 @@ The order of concepts is roughly the same as [The Rust Programming Language](htt
 - [Concurrency in Rust](https://github.com/I-Do-CS/rust-notes/tree/main/13.concurrency/concurrency.md)
 - [Asynchronous Programming in Rust](https://github.com/I-Do-CS/rust-notes/tree/main/14.async/async.md)
 - [Patterns & Matching Revisited](https://github.com/I-Do-CS/rust-notes/tree/main/15.patterns/patterns.md)
+- [Miscellaneous Topics](https://github.com/I-Do-CS/rust-notes/tree/main/16.misc/misc.md)
